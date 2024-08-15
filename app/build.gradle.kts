@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    kotlin("plugin.serialization")
+    id("kotlin-parcelize")
+    id("kotlin-kapt")
 }
 
 android {
@@ -51,6 +54,8 @@ android {
 
 dependencies {
 
+    val nav_version = "2.8.0-beta07"
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -66,4 +71,10 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    //Serialization
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.1")
+
+    //Navigation
+    implementation("androidx.navigation:navigation-compose:$nav_version")
 }
