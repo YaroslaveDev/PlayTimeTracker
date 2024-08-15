@@ -8,12 +8,12 @@ plugins {
 
 android {
     namespace = "com.pfv.playtimetracker"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.pfv.playtimetracker"
         minSdk = 28
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -43,7 +43,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.14"
     }
     packaging {
         resources {
@@ -73,7 +73,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     //Serialization
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
 
     //Navigation
     implementation("androidx.navigation:navigation-compose:$nav_version")
