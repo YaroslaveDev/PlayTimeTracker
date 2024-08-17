@@ -23,10 +23,4 @@ class DataModule {
     ): PlayTimeTrackerRepository {
         return PlayTimeTrackerRepositoryImpl(sharedPreferences = sharedPreferences)
     }
-
-//    @Provides
-//    fun providePlayTimeManager(
-//        getPlayTimeUseCase: GetPlayTimeUseCase,
-//        savePlayTimeUseCase: SavePlayTimeUseCase
-//    ): PlayTimeManager = PlayTimeManager(getPlayTimeUseCase, savePlayTimeUseCase)
 }

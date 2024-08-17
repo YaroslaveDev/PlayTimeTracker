@@ -2,6 +2,7 @@ package com.pfv.playtimetracker.di
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.pfv.playtimetracker.constants.BaseAppConstants.PrefsName
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,6 +17,6 @@ class LocalStoreModule {
     @Singleton
     @Provides
     fun provideSharedPreference(@ApplicationContext context: Context): SharedPreferences {
-        return context.getSharedPreferences("preferences_name", Context.MODE_PRIVATE)
+        return context.getSharedPreferences(PrefsName, Context.MODE_PRIVATE)
     }
 }
