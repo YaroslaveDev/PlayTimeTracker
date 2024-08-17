@@ -4,6 +4,7 @@ plugins {
     kotlin("plugin.serialization")
     id("kotlin-parcelize")
     id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -77,4 +78,12 @@ dependencies {
 
     //Navigation
     implementation("androidx.navigation:navigation-compose:$nav_version")
+
+    //Local Store
+    implementation("androidx.preference:preference-ktx:1.2.1")
+
+    //Hilt
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    kapt("com.google.dagger:hilt-compiler:2.51.1")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 }
